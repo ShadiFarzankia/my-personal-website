@@ -2,7 +2,7 @@
     <div>
         <ul class="navigation-container">
             <li class="navigation-item">
-                <nuxt-link to="/about-me"
+                <nuxt-link to="/about"
                 class="navigation-link">ABOUT ME</nuxt-link>
             </li>
             <li class="navigation-item">
