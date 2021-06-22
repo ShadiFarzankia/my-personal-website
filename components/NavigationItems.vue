@@ -1,25 +1,35 @@
 <template>
     <div>
         <ul class="navigation-container">
-            <li class="navigation-item">
+            <li class="navigation-item" @click="closeSideNav">
                 <nuxt-link to="/about"
                 class="navigation-link">ABOUT ME</nuxt-link>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item" @click="closeSideNav">
                 <nuxt-link to="books" 
                 class="navigation-link">BOOKS</nuxt-link>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item" @click="closeSideNav">
                 <nuxt-link to="articles"
                 class="navigation-link">ARTICLES</nuxt-link>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item" @click="closeSideNav">
                 <nuxt-link to="experiences"
                 class="navigation-link">EXPERIENCES</nuxt-link>
             </li>
         </ul>
     </div>
 </template>
+
+<script>
+export default {
+    methods: {
+        closeSideNav() {
+            this.$emit('closeSideNav', false)
+        }
+    }
+}
+</script>
 
 <style scoped>
 .navigation-container {
